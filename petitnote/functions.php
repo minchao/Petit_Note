@@ -346,7 +346,7 @@ function md_link($str){
 
 // 自動リンク
 function auto_link($str){
-	if(strpos($str,'<a')===false){//マークダウン記法がなかった時
+	if(strpos($str,'<<a')===false){//マークダウン記法がなかった時
 		$str= preg_replace("{(https?://[[:alnum:]\+\$\;\?\.%,!#~*/:@&=_-]+)}","<a href=\"\\1\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">\\1</a>",$str);
 	}
 	return $str;
